@@ -1,0 +1,29 @@
+name: 'CMake: Run all Targets'
+description: |
+  Runs all executable targets from a CMake build directory.
+  The project must already be built.
+inputs:
+  cmake-executable:
+    description: 'The CMake executable. Minimum of 3.15 required.'
+    required: true
+    default: 'cmake'
+  build-folder:
+    description: 'The CMake build directory'
+    required: true
+    default: 'build'
+  source-folders:
+    description: |
+      Source folders to consider. One per line, relative to the source directory, without './'.
+      If empty, executables generated from all source folders will be executed.
+      If not empty, executables with any source file that doesn't match any of the folders will be ignored.
+    required: false
+  fail-fast:
+    description: 'Whether to stop execution as soon as an executable returns a non-zero value'
+    required: true
+    default: false
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'target'
+  color: 'gray-dark'

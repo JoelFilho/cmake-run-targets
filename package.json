@@ -1,0 +1,23 @@
+{
+  "name": "cmake-run-all",
+  "version": "0.0.1",
+  "description": "GitHub Action to run all executable CMake Targets",
+  "main": "index.js",
+  "keywords": [
+    "github-actions",
+    "ci",
+    "c++",
+    "cpp",
+    "cmake"
+  ],
+  "author": "Joel P. C. Filho",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JoelFilho/cmake-run-targets"
+  }
+}
